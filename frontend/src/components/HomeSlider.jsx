@@ -8,6 +8,7 @@ import img1 from "../assets/cementArticles1.jpeg";
 import img2 from "../assets/cementArticles2.jpg";
 import img3 from "../assets/cementArticles3.jpeg";
 import img4 from "../assets/cementArticles4.webp";
+import { Link } from "react-router-dom";
 
 const HomeSlider = () => {
   const slider = [
@@ -47,7 +48,9 @@ const HomeSlider = () => {
                 <div className="text-white absolute top-[60vh] left-[10vw] flex flex-col items-start justify-center gap-6">
                     <h1 className="text-5xl font-semibold">Product is a Visual Art.</h1>
                     <h3 className="text-2xl">The Product speaks for itself.</h3>
-                    <button className="bg-amber-500 cursor-pointer hover:bg-neutral-600 font-semibold text-white py-2 px-4 rounded-4xl transition-all duration-300">Check Products</button>
+                    <Link to="/products">
+                      <button className="bg-amber-500 cursor-pointer hover:bg-neutral-600 font-semibold text-white py-2 px-4 rounded-4xl transition-all duration-300">Check Products</button>
+                    </Link>
                 </div>
               </SwiperSlide>
             ))}

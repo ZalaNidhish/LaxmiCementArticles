@@ -10,6 +10,7 @@ import img1 from "../assets/cementArticles1.jpeg";
 import img2 from "../assets/cementArticles2.jpg";
 import img3 from "../assets/cementArticles3.jpeg";
 import img4 from "../assets/cementArticles4.webp";
+import { Link } from "react-router-dom";
 const ProductsSlider = () => {
   const slider = [
     {
@@ -74,9 +75,11 @@ const ProductsSlider = () => {
         </Swiper>
       </div>
       <div className="w-full flex items-center justify-center px-10">
-        <button className="text-white bg-amber-500 cursor-pointer px-2 py-1 text-lg font-semibold rounded mt-10 hover:bg-amber-600 transition-colors duration-300">
-          View All
-        </button>
+        <Link to="/products">
+          <button className="text-white bg-amber-500 cursor-pointer px-2 py-1 text-lg font-semibold rounded mt-10 hover:bg-amber-600 transition-colors duration-300">
+            View All
+          </button>
+        </Link>
       </div>
     </div>
   );

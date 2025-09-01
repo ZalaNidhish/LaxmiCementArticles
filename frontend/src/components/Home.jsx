@@ -3,6 +3,8 @@ import bg from "../assets/bg.jpg";
 import HomeSlider from "./HomeSlider";
 import AboutUs from "./AboutUs";
 import ProductsSlider from "./ProductsSlider";
+import Footer from "./Footer.jsx";
+
 
 const Home = () => {
   return (
@@ -11,6 +13,7 @@ const Home = () => {
         <HomeSlider />
         <AboutUs />
         <ProductsSlider />
+        <Footer />
       </div>
     </div>
   );

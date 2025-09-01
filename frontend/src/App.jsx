@@ -1,8 +1,11 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
+import Home from "./components/Home";
+import About from "./components/About";
+import Products from "./components/Products";
+import Gallery from "./components/Gallery";
+import ContactUs from "./components/ContactUs";
 import Navbar from "./components/Navbar.jsx";
-import Home from "./components/Home.jsx";
-import Footer from "./components/Footer.jsx";
 
 const App = () => {
   return (
@@ -13,9 +16,11 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contactUs" element={<ContactUs />} />
       </Routes>
-
-      <Footer />
     </div>
   );
 };
