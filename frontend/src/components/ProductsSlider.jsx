@@ -43,7 +43,7 @@ const ProductsSlider = () => {
       <h1 className="text-white text-5xl font-bold text-center py-20">
         Products
       </h1>
-      <div className="productslider">
+      <div className="productslider px-4">
         <Swiper
           spaceBetween={20} // gap between slides (px)
           slidesPerView={3} // number of slides visible
@@ -51,7 +51,7 @@ const ProductsSlider = () => {
           modules={[Navigation, Pagination, Autoplay]}
           loop={true}
           autoplay={{
-            delay: 2500,
+            delay: 1500,
             disableOnInteraction: false,
           }}
           className="flex items-center justify-center"

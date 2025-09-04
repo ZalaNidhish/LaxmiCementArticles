@@ -34,7 +34,7 @@ const HomeSlider = () => {
           modules={[Navigation, Pagination, Autoplay]}
           loop={true}
           autoplay={{
-            delay: 5000,
+            delay: 3000,
             disableOnInteraction: false,
           }}
           className="flex items-center justify-center"
@@ -46,10 +46,10 @@ const HomeSlider = () => {
               >
                 <img src={slide.img} className="h-full w-full object-cover" />
                 <div className="text-white absolute top-[60vh] left-[10vw] flex flex-col items-start justify-center gap-6">
-                    <h1 className="text-5xl font-semibold">Product is a Visual Art.</h1>
-                    <h3 className="text-2xl">The Product speaks for itself.</h3>
+                    <h1 className="text-5xl font-semibold HomeSliderText1">Product is a Visual Art.</h1>
+                    <h3 className="text-2xl HomeSliderText2">The Product speaks for itself.</h3>
                     <Link to="/products">
-                      <button className="bg-amber-500 cursor-pointer hover:bg-neutral-600 font-semibold text-white py-2 px-4 rounded-4xl transition-all duration-300">Check Products</button>
+                      <button className="HomeSliderButton bg-amber-500 cursor-pointer hover:bg-neutral-600 font-semibold text-white py-2 px-4 rounded-4xl transition-all duration-300">Check Products</button>
                     </Link>
                 </div>
               </SwiperSlide>

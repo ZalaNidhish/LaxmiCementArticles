@@ -2,8 +2,8 @@ import React from 'react'
 
 const Gallery = () => {
   return (
-    <div>
-      gallery page
+    <div className='min-h-screen flex flex-col items-center justify-center '>
+      gallery page in progress
     </div>
   )
 }

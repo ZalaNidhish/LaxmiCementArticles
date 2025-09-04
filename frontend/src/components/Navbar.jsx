@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="navbar">
       <div className="font-bold text-1xl bg-neutral-800/90 text-white flex items-center justify-between px-10 py-2 absolute top-0 z-5 w-full">
         <div className="text-2xl font-bold text-amber-500 text-center">
           Laxmi Cement <br /> Articles
