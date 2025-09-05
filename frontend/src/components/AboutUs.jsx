@@ -7,16 +7,17 @@ gsap.registerPlugin(ScrollTrigger);
 const AboutUs = () => {
   useEffect(() => {
     let ctx = gsap.context(() => {
+      // ---- OLD EFFECT (commented out) ----
+      /*
       let totalSpans = document.querySelectorAll(".AboutUsText span").length;
 
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".AboutUs",
           start: "top top",
-          end: "+=" + totalSpans * 200, // enough space for each line
+          end: "+=" + totalSpans * 200,
           scrub: true,
           pin: true,
-          // markers: true, // uncomment for debugging
         },
       });
 
@@ -27,6 +28,22 @@ const AboutUs = () => {
         stagger: 1,
         ease: "power2.out",
       });
+      */
+
+      // ---- NEW EFFECT: Sentence by sentence ----
+      gsap.from(".AboutUsText span", {
+        scrollTrigger: {
+          trigger: ".AboutUs",
+          start: "top 30%", 
+          end: "bottom 20%",
+          toggleActions: "play none none reverse", // play once
+        },
+        opacity: 0,
+        y: -20, // comes slightly from above
+        duration: 0.2,
+        stagger: 0.1, // one sentence after another
+        ease: "power2.out",
+      });
     });
 
     return () => ctx.revert();
@@ -35,7 +52,7 @@ const AboutUs = () => {
   return (
     <div className="w-[100vw] flex flex-col items-center justify-center gap-10 AboutUs py-20">
       <h2 className="text-5xl font-bold text-amber-500">About Us</h2>
-      <div className="text-justify text-lg px-20 py-6 leading-8">
+      <div className="text-justify text-lg px-30 py-6 leading-8">
         <p className="AboutUsText">
           <span className="block">
             Laxmi Cement Articles is India's leading Manufacturer and Trader of

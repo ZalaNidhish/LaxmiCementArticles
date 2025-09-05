@@ -10,7 +10,9 @@ const Footer = () => {
     const p = document.querySelector(".footer-text");
     if (p) {
       const words = p.innerText.split(" ");
-      p.innerHTML = words.map(word => `<span class="word inline-block">${word}</span>`).join(" ");
+      p.innerHTML = words
+        .map((word) => `<span class="word inline-block">${word}</span>`)
+        .join(" ");
     }
 
     // Animate each word (falling effect)
@@ -31,24 +33,24 @@ const Footer = () => {
   return (
     <div className="h-screen w-full bg-black flex flex-col items-center justify-center text-white gap-10">
       <div className="flex items-center justify-between gap-30 h-10/12">
-        
         {/* Paragraph */}
         <p className="max-w-lg text-justify footer-text leading-7">
-          <b>Laxmi Cement Articles</b> is India's leading Manufacturer and Trader of
-          quality cement articles. In the past 28 years, our organization has
-          achieved immense success and has become a leader in the market with
-          its specialty in producing diverse cement articles like Ready Made
-          Compound Wall, RCC Compound Wall, Garden Benches, Curbstones, Road
-          Dividers and many more.
+          <b>Laxmi Cement Articles</b> is India's leading Manufacturer and
+          Trader of quality cement articles. In the past 28 years, our
+          organization has achieved immense success and has become a leader in
+          the market with its specialty in producing diverse cement articles
+          like Ready Made Compound Wall, RCC Compound Wall, Garden Benches,
+          Curbstones, Road Dividers and many more.
         </p>
 
         {/* Map */}
         <div className="w-full max-w-md h-64 overflow-hidden shadow-lg flex flex-col items-center justify-center gap-4">
           <h1 className="text-2xl font-bold">Locate Us Here.</h1>
           <iframe
-            src="https://www.google.com/maps?q=22.70442,75.85688&z=15&output=embed"
-            className="w-full h-full border-0 rounded-lg"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.985398565132!2d72.92097817435464!3d22.617020431342592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e4f0008e96a67%3A0x8d4d2ad5eb4a1c1a!2sLaxmi%20Cement%20Articles!5e0!3m2!1sen!2sin!4v1757050557232!5m2!1sen!2sin"
             loading="lazy"
+            className="w-full h-full border-0 rounded-2xl"
+            // referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>
